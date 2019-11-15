@@ -19,6 +19,7 @@ class CoroutinesActivity : AppCompatActivity() {
         viewModel = ViewModelProviders.of(this).get(CoroutinesViewModel::class.java)
 
         button_main_coroutines.setOnClickListener { viewModel.simpleCoroutinesClicked() }
+        button_main_suspend.setOnClickListener { viewModel.suspendFunctionsClicked() }
 
         viewModel.snackbar.observe(
             this,

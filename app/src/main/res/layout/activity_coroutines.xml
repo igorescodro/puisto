@@ -17,4 +17,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button_main_suspend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Multiple suspend functions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_main_coroutines" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

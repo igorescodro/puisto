@@ -11,6 +11,8 @@ class CoroutinesViewModel : ViewModel() {
 
     private val _snackbar = MutableLiveData<String>()
 
+    private val movieRepository = MovieRepository()
+
     val snackbar: LiveData<String>
         get() = _snackbar
 
@@ -18,6 +20,12 @@ class CoroutinesViewModel : ViewModel() {
         viewModelScope.launch {
             delay(2_000)
             _snackbar.value = "I'm a simple coroutine"
+        }
+    }
+
+    fun suspendFunctionsClicked() {
+        viewModelScope.launch {
+            _snackbar.value = movieRepository.loadRandomMovie()
         }
     }
 }
