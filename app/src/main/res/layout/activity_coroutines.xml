@@ -26,4 +26,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_main_coroutines" />
 
+    <Button
+        android:id="@+id/button_main_flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Coroutines + Flow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_main_suspend" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

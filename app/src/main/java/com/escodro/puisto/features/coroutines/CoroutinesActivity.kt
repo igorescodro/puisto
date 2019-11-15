@@ -7,7 +7,11 @@ import androidx.lifecycle.ViewModelProviders
 import com.escodro.puisto.R
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_coroutines.*
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.FlowPreview
 
+@ExperimentalCoroutinesApi
+@FlowPreview
 class CoroutinesActivity : AppCompatActivity() {
 
     lateinit var viewModel: CoroutinesViewModel
@@ -20,6 +24,7 @@ class CoroutinesActivity : AppCompatActivity() {
 
         button_main_coroutines.setOnClickListener { viewModel.simpleCoroutinesClicked() }
         button_main_suspend.setOnClickListener { viewModel.suspendFunctionsClicked() }
+        button_main_flow.setOnClickListener { viewModel.flowClicked() }
 
         viewModel.snackbar.observe(
             this,
